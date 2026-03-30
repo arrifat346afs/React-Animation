@@ -6,13 +6,13 @@ const pareant = {
   visible : {
     opacity: 1,
     transition: {
-      staggerChildren: 1
+      staggerChildren: 0.2
     }
   }
 }
 const child = {
   hidden : { opacity: 0, x: -20 },
-  visible : { opacity: 1, x: 0, transition: { duration: 0.5 } }
+  visible : { opacity: 1, x: 0 }
 }
 
 
@@ -23,13 +23,12 @@ export function Feture() {
   return (
     <div>
       <h2>Feture Component</h2>
-      <motion.ul>
+      <motion.ul variants={pareant} initial="hidden" animate="visible">
         {fetureName.map((name, index) => (
           <motion.li 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.2 }}
-            key={index}>
+            key={index}
+            variants={child}
+          >
             {name}
           </motion.li>
         ))}
