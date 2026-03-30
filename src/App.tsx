@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import  { Feture } from "./component/Feture";
+import  { Feture } from "./components/Feture";
 
 function App() {
   return (
