@@ -16,7 +16,7 @@ function App() {
         Welcome to React with TypeScript!
       </motion.h1>
       <motion.button
-        className="bg-primary text-primary-foreground hover:bg-primary/80"
+        className="bg-primary text-primary-foreground hover:bg-primary/80 rounded-lg px-4 py-2 font-medium"
         whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.9, y: 1 }}
         transition={{ type: "spring" }}

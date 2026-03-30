@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 
 
 
@@ -11,7 +13,13 @@ export function Feture() {
       <h2>Feture Component</h2>
       <ul>
         {fetureName.map((name, index) => (
-          <li key={index}>{name}</li>
+          <motion.li 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.2 }}
+          key={index}>
+            {name}
+          </motion.li>
         ))}
       </ul>
     </div>
