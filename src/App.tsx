@@ -15,13 +15,13 @@ function App() {
       >
         Welcome to React with TypeScript!
       </motion.h1>
-      <motion.Button
+      <motion.button
         whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.9, y: 1 }}
         transition={{ type: "spring" }}
       >
         Button
-      </motion.Button>
+      </motion.button>
       <Feture /></div>
     </>
   );
