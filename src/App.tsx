@@ -1,10 +1,12 @@
 import { motion } from "motion/react";
 import  { Feture } from "./components/Feture";
+import ModeToggle from "./components/mode-toggle";
 
 function App() {
   return (
     <>
     <div className="flex flex-col items-center justify-center w-full h-screen gap-5">
+      <ModeToggle />
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -13,13 +15,13 @@ function App() {
       >
         Welcome to React with TypeScript!
       </motion.h1>
-      <motion.button
+      <motion.Button
         whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.9, y: 1 }}
         transition={{ type: "spring" }}
       >
         Button
-      </motion.button>
+      </motion.Button>
       <Feture /></div>
     </>
   );
